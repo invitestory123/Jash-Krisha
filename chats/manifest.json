@@ -1,0 +1,48 @@
+{
+  "exportedAt": "2026-09-29T17:59:46.658Z",
+  "cutoff": "2026-09-29T17:59:46.658Z",
+  "chatFile": "chat.md",
+  "legacyChatFile": "chat.txt",
+  "jpegQuality": 95,
+  "counts": {
+    "messages": 25,
+    "media": 2,
+    "missing": 0
+  },
+  "files": [
+    {
+      "name": "001-asset-1702.jpeg",
+      "path": "media/001-asset-1702.jpeg",
+      "mime": "image/jpeg",
+      "sourceMime": "image/jpeg",
+      "size": 114754,
+      "sha256": "2f3165c2e657878ec25e0854136d0a2ef4a34d4d51d91ebcfd404ec0d82ca7ec",
+      "sourceSha256": "2f3165c2e657878ec25e0854136d0a2ef4a34d4d51d91ebcfd404ec0d82ca7ec",
+      "messageId": 13026,
+      "messageType": "image",
+      "caption": null,
+      "converted": false,
+      "convertedFrom": null,
+      "quality": null,
+      "note": null
+    },
+    {
+      "name": "002-asset-1703.jpeg",
+      "path": "media/002-asset-1703.jpeg",
+      "mime": "image/jpeg",
+      "sourceMime": "image/jpeg",
+      "size": 68153,
+      "sha256": "9bff4694e0e0f696c901c387523e8183c67001d03e3f8a449ab41e35a9a76c5c",
+      "sourceSha256": "9bff4694e0e0f696c901c387523e8183c67001d03e3f8a449ab41e35a9a76c5c",
+      "messageId": 13032,
+      "messageType": "image",
+      "caption": null,
+      "converted": false,
+      "convertedFrom": null,
+      "quality": null,
+      "note": null
+    }
+  ],
+  "missing": [],
+  "partial": false
+}

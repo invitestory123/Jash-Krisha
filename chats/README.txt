@@ -1,0 +1,3 @@
+InviteStory chat + media export — exported 2026-09-29T17:59:46.658Z.
+chat.md is the primary chronological log (UTC) with relative media references an AI reader can resolve after unzipping (images render inline, audio/video preview via embedded tags). chat.txt is the legacy plain-text copy. Media lives in media/ with MIME-correct extensions (images normalized to .jpeg at quality 95; JPEG originals pass through untouched). manifest.json traces every file and lists anything missing.
+Order metadata (amounts, production status, designer, payment) is intentionally NOT included — this export is purely chat history plus the media that was shared.
