@@ -7,24 +7,9 @@
   letter-spacing: normal !important;
 }
 
-/* Floating Language Toggle Pill */
+/* Floating Language Toggle Pill - Disabled (English Only) */
 .lang-toggle-btn {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 45;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: color-mix(in oklab, var(--paper) 90%, #fff);
-  border: 1px solid color-mix(in oklab, var(--gold) 60%, var(--border));
-  border-radius: 9999px;
-  padding: 6px 14px;
-  box-shadow: 0 8px 24px -6px rgba(60, 45, 25, 0.25), 0 0 0 1px rgba(212, 175, 55, 0.15) inset;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  display: none !important;
 }
 
 .lang-toggle-btn:hover {

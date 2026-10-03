@@ -10,17 +10,15 @@ All customer data is managed in:
 → [editable/wedding-data.js](file:///e:/invate%20%20story/works/Debanu%20Das/editable/wedding-data.js)
 
 ### 1. Couple Details
-- `couple.groom`: `"Jash"` (Gujarati: `couple.groomGu`: `"જશ"`)
-- `couple.bride`: `"Krisha"` (Gujarati: `couple.brideGu`: `"ક્રિશા"`)
+- `couple.groom`: `"Jash"`
+- `couple.bride`: `"Krisha"`
 - `couple.monogram`: `"J & K"`
 
 ### 2. Family Details
 - **Groom Side**:
-  - `Jash` — `Son of Jigneshbhai Harjibhai Patel & Urmilaben`
-  - Gujarati: `જશ` — `સુપુત્ર: જીગ્નેશભાઈ હરજીભાઈ પટેલ અને ઉર્મિલાબેન`
+  - `Jash` — `Son of Urmilaben & Jigneshbhai Harjibhai Patel` (Patel Family • Manund)
 - **Bride Side**:
-  - `Krisha` — `Daughter of Piyushbhai Karshanbhai Patel & Vaishaliben`
-  - Gujarati: `ક્રિશા` — `સુપુત્રી: પિયુષભાઈ કરશનભાઈ પટેલ અને વૈશાલીબેન`
+  - `Krisha` — `Daughter of Vaishaliben & Piyushbhai Karshanbhai Patel` (Patel Family • Balisana)
 
 ### 3. Event Date & Time (Engagement Ceremony)
 - Date: `13 November 2026` (Gujarati: `૧૩ નવેમ્બર ૨૦૨૬`)
