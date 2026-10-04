@@ -32,5 +32,31 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Fallback helper if user opens directly via file:// where ES modules are restricted by browsers
+      if (window.location.protocol === 'file:') {
+        window.addEventListener('DOMContentLoaded', function () {
+          setTimeout(function () {
+            var r = document.getElementById('root');
+            if (!r || r.children.length === 0) {
+              var box = document.createElement('div');
+              box.style.cssText = 'position:fixed;inset:0;background:#FAF5EC;display:flex;align-items:center;justify-content:center;padding:20px;font-family:serif;z-index:99999;color:#3C2D19;';
+              box.innerHTML = '<div style="max-width:500px;background:#fff;border:1px solid #D4AF37;border-radius:12px;padding:32px;box-shadow:0 10px 30px rgba(0,0,0,0.1);text-align:center;">'
+                + '<h2 style="font-size:22px;color:#8B2500;margin:0 0 12px;">Jash &amp; Krisha Engagement Invitation</h2>'
+                + '<p style="font-size:14px;color:#555;line-height:1.6;margin-bottom:18px;">Modern browsers restrict local module scripts when opening directly from disk (<code>file://</code>).</p>'
+                + '<div style="background:#FAF5EC;border-left:4px solid #D4AF37;padding:12px 14px;text-align:left;font-size:13px;margin-bottom:16px;">'
+                + '<strong>To preview the invitation:</strong><br/>'
+                + '1. Double-click <b>preview.bat</b> in this folder, or<br/>'
+                + '2. Run <code>python -m http.server</code> in terminal, or<br/>'
+                + '3. View online on <b>GitHub Pages</b>.'
+                + '</div>'
+                + '<p style="font-size:12px;color:#888;margin:0;">On any web server or GitHub Pages, the full animated invitation opens automatically.</p>'
+                + '</div>';
+              document.body.appendChild(box);
+            }
+          }, 1500);
+        });
+      }
+    </script>
   </body>
 </html>

@@ -116,8 +116,7 @@ new_cover_fn = '''function __({onOpen:e}){
       (0,O.jsx)(Gp,{children:n===`sealed`&&(0,O.jsxs)(Q.span,{className:`caps flex items-center gap-3 text-[0.6rem] font-semibold text-sepia tracking-widest`,initial:{opacity:0},animate:{opacity:[.4,1,.4]},exit:{opacity:0,transition:{duration:.25,repeat:0}},transition:{duration:2.6,repeat:1/0,ease:`easeInOut`},children:[(0,O.jsx)(`span`,{className:`h-px w-7 bg-gold/70`}),`Tap to open`,(0,O.jsx)(`span`,{className:`h-px w-7 bg-gold/70`})]})})
     ]}),
     n===`breaking`&&!t&&(0,O.jsx)(m_,{count:44,spread:340,seed:3})
-  ]});
-}'''
+  ]})})}'''
 c = c[:s_seal] + new_cover_fn + c[e_seal:]
 
 # 4. Replace function b_ (Hero section: date not cursive, couple holding child frames)
@@ -171,7 +170,7 @@ c = c[:s_b] + new_b_fn + c[e_b:]
 
 # 5. Replace function C_ (Event Details: date not cursive, 9:00 AM lit bit bigger, temple in normal letter like manund, gujarat)
 s_c = c.find('function C_(){')
-e_c = c.find('function', s_c + 10)
+e_c = c.find('function w_()', s_c)
 assert s_c != -1 and e_c != -1, "C_ boundaries not found"
 
 new_c_fn = '''function C_(){
@@ -205,7 +204,7 @@ c = c[:s_c] + new_c_fn + c[e_c:]
 
 # 6. Replace function D_ (Venue section)
 s_d = c.find('function D_(){')
-e_d = c.find('function', s_d + 10)
+e_d = c.find('var O_=', s_d)
 assert s_d != -1 and e_d != -1, "D_ boundaries not found"
 
 new_d_fn = '''function D_(){
@@ -491,9 +490,15 @@ function I_(){
 '''
 
 s_i = c.find('function I_(){')
-e_i = c.find('var L_={IndexRoute:F_.update({id:`/', s_i)
+e_i = c.find('var L_={IndexRoute:', s_i)
 assert s_i != -1 and e_i != -1, "I_ boundaries not found"
 c = c[:s_i] + additional_components + c[e_i:]
+
+# Ensure any route or fallback renders the invitation page I_ without 404
+c = c.replace('notFoundComponent:oa', 'notFoundComponent:I_')
+
+# Bypass missing lenis module so there are no unhandled promise rejections
+c = c.replace('function M_(){', 'function M_(){return; /* lenis bypassed */ ')
 
 with open('assets/index-2d1L6cXj.js', 'w', encoding='utf-8') as f:
     f.write(c)
