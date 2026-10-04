@@ -29,7 +29,7 @@ e_seal = c.find('function v_(e,t,n=[', s_seal)
 assert s_seal != -1 and e_seal != -1, "seal boundaries not found"
 
 new_cover_fn = '''function __({onOpen:e}){
-  let t=Bg(),[n,r]=(0,b.useState)(`sealed`);
+  let t=Bg(),[n,r]=(0,b.useState)(`sealed`),i=`${$.groom[0]}${$.bride[0]}`;
   (0,b.useEffect)(()=>(c_(),()=>l_()),[]);
 
   let a=()=>{
@@ -89,7 +89,7 @@ new_cover_fn = '''function __({onOpen:e}){
           (0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-6 rounded-full border border-gold/50`,animate:t?{}:{scale:[1,1.4],opacity:[.55,0]},transition:{duration:2.6,repeat:1/0,ease:`easeOut`}}),
           (0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-8 rounded-full`,style:{background:`radial-gradient(circle, color-mix(in oklab, var(--gold) 45%, transparent) 0%, transparent 70%)`},animate:t?{}:{opacity:[.5,.9,.5],scale:[.96,1.05,.96]},transition:{duration:3.4,repeat:1/0,ease:`easeInOut`}}),
           (0,O.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-1/2 left-1/2 h-24 w-16 -translate-x-1/2 translate-y-4`,style:{background:`linear-gradient(180deg, color-mix(in oklab, var(--gold) 70%, transparent), transparent)`,clipPath:`polygon(28% 0, 72% 0, 100% 100%, 78% 84%, 50% 100%, 22% 84%, 0 100%)`,opacity:.55}}),
-          /* The Wax Seal Button Medallion with Royal Crest Logo (Item 7: pls change tha logo there) */
+          /* The Wax Seal Button Medallion - clean authentic monogram initials without crown logo */
           (0,O.jsxs)(Q.span,{
             "aria-hidden":`true`,
             className:`relative grid size-24 place-items-center overflow-hidden text-paper shadow-[0_18px_40px_-16px_oklch(0.5_0.1_70)]`,
@@ -100,14 +100,8 @@ new_cover_fn = '''function __({onOpen:e}){
             animate:t?{}:{rotate:[-1.2,1.2,-1.2]},
             transition:{duration:6,repeat:1/0,ease:`easeInOut`},
             children:[
-              (0,O.jsx)(`span`,{"aria-hidden":`true`,className:`absolute inset-[6px] rounded-full border border-paper/40`}),
-              (0,O.jsx)(`span`,{"aria-hidden":`true`,className:`absolute inset-[10px] rounded-full border border-dashed border-paper/25`}),
-              /* Royal Crown & Monogram Emblem */
-              (0,O.jsxs)(`div`,{className:`relative flex flex-col items-center justify-center select-none pt-0.5`,children:[
-                (0,O.jsx)(`svg`,{className:`size-4 text-paper/90 drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)] mb-0.5`,viewBox:`0 0 24 24`,fill:`currentColor`,children:(0,O.jsx)(`path`,{d:`M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z`})}),
-                (0,O.jsx)(`span`,{className:`font-serif text-[1.45rem] font-bold tracking-wider leading-none text-paper drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.45)]`,children:`J · K`}),
-                (0,O.jsx)(`span`,{className:`mt-0.5 text-[0.42rem] tracking-[0.25em] font-sans font-semibold text-paper/85 uppercase`,children:`LOVE`})
-              ]}),
+              (0,O.jsx)(`span`,{"aria-hidden":`true`,className:`absolute inset-[7px] rounded-full border border-paper/35`}),
+              (0,O.jsx)(`span`,{className:`script relative text-[1.9rem] leading-none tracking-tight drop-shadow-[0_1px_0_oklch(0.5_0.09_66)] select-none`,children:i}),
               !t&&(0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-y-[-40%] w-10 -skew-x-12 bg-paper/35 blur-[6px]`,animate:{x:[`-140%`,`420%`]},transition:{duration:1.5,repeat:1/0,repeatDelay:3.4,ease:`easeInOut`}})
             ]
           })
@@ -336,11 +330,8 @@ function FamilySection_(){
   ]});
 }
 
-/* Photo Section: Contextual customer photos + Replaceable couple photo slot */
+/* Photo Section: Contextual customer photos without blank couple placeholder */
 function PhotoSection_(){
-  let images = $.images || {};
-  let couplePhoto = images.couplePhoto || "";
-
   return (0,O.jsxs)(`section`,{id:`photo-gallery`,className:`px-6 py-14 text-center sm:py-20 max-w-4xl mx-auto`,children:[
     (0,O.jsxs)(Xg,{children:[
       (0,O.jsx)(Yg,{className:`mb-8`}),
@@ -350,33 +341,9 @@ function PhotoSection_(){
     ]}),
 
     (0,O.jsx)(Xg,{delay:.18,children:(0,O.jsxs)(`div`,{
-      className:`mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 items-stretch`,
+      className:`mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto items-stretch`,
       children:[
-        /* 1. Couple Photo Slot */
-        (0,O.jsxs)(`div`,{
-          className:`photo-card flex flex-col justify-between`,
-          children:[
-            couplePhoto ? (
-              (0,O.jsx)(`div`,{className:`photo-image-wrapper`,children:
-                (0,O.jsx)(`img`,{src:couplePhoto,alt:`Jash & Krisha`,className:`size-full object-cover`})
-              })
-            ) : (
-              (0,O.jsxs)(`div`,{className:`photo-slot-replaceable`,children:[
-                (0,O.jsxs)(`svg`,{className:`size-12 text-gold/75 mb-3`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.3`,children:[
-                  (0,O.jsx)(`rect`,{x:`3`,y:`3`,width:`18`,height:`18`,rx:`4`}),
-                  (0,O.jsx)(`circle`,{cx:`8.5`,cy:`8.5`,r:`1.5`}),
-                  (0,O.jsx)(`path`,{d:`M21 15l-5-5L5 21`})
-                ]}),
-                (0,O.jsx)(`p`,{className:`caps text-[0.58rem] font-bold text-ink tracking-wider`,children:`Couple Photo Slot`}),
-                (0,O.jsx)(`p`,{className:`text-xs italic text-sepia/75 mt-1 max-w-[190px] leading-relaxed`,children:`Reserved for Jash & Krisha's photograph`}),
-                (0,O.jsx)(`span`,{className:`caps mt-3 inline-block rounded-full border border-gold/50 px-3 py-1 text-[0.45rem] font-semibold text-gold tracking-widest`,children:`Ready for replacement`})
-              ]})
-            ),
-            (0,O.jsx)(`p`,{className:`caps text-[0.54rem] font-semibold text-sepia/80 mt-3 tracking-widest`,children:`Jash & Krisha`})
-          ]
-        }),
-
-        /* 2. Customer Photo 1 (Baby Jash) */
+        /* 1. Customer Photo 1 (Baby Jash) */
         (0,O.jsxs)(`div`,{
           className:`photo-card flex flex-col justify-between`,
           children:[
@@ -395,7 +362,7 @@ function PhotoSection_(){
           ]
         }),
 
-        /* 3. Customer Photo 2 (Baby Krisha) */
+        /* 2. Customer Photo 2 (Baby Krisha) */
         (0,O.jsxs)(`div`,{
           className:`photo-card flex flex-col justify-between`,
           children:[

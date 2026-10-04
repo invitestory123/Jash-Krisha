@@ -32,8 +32,7 @@ All customer data is managed in:
 - Query: `"Khamalaimata Temple, Manund, Gujarat 384260"`
 - `venue.directionsUrl`: Configurable link (empty by default until customer supplies exact link; falls back safely to address search without fake links).
 
-### 5. Photographs & Replaceable Slots
-- **Couple Photo**: `images.couplePhoto` in `editable/wedding-data.js` (empty by default, displaying a clean "Ready for replacement" card until customer provides couple photo).
+### 5. Photographs
 - **Customer Photos**:
   - `editable/assets/customer-photo-1.jpg`: Customer supplied photo (toddler with toy), respectfully labeled "Cherished Moments".
   - `editable/assets/customer-photo-2.jpg`: Customer supplied photo (toddler in magenta), respectfully labeled "Sweet Memories".

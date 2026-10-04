@@ -88,10 +88,8 @@ window.WEDDING_DATA = {
     mapSearchUrl: "",
   },
 
-  // Image Assets & Replaceable Slots
+  // Image Assets
   images: {
-    // Couple photo slot - left empty until customer provides couple photograph
-    couplePhoto: "",
     // Customer supplied photographs with respectful, contextual captions
     customerPhotos: [
       {
