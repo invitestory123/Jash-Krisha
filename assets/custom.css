@@ -175,6 +175,34 @@
   transform: scale(0.95);
 }
 
+/* View Location Button (Item 2 fix: wide, well-proportioned pill button) */
+.view-location-btn {
+  display: flex !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  min-height: 52px !important;
+  margin: 24px auto 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  border-radius: 9999px !important;
+  background-color: var(--ink, #20150b) !important;
+  color: var(--paper, #FAF5EC) !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-location-btn:hover {
+  opacity: 0.92 !important;
+  transform: translateY(-1px) scale(1.01) !important;
+  box-shadow: 0 14px 28px -6px rgba(0, 0, 0, 0.5) !important;
+}
+
 /* Mobile-First Tweaks */
 @media (max-width: 640px) {
   .lang-toggle-btn {

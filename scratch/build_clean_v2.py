@@ -29,7 +29,7 @@ e_seal = c.find('function v_(e,t,n=[', s_seal)
 assert s_seal != -1 and e_seal != -1, "seal boundaries not found"
 
 new_cover_fn = '''function __({onOpen:e}){
-  let t=Bg(),[n,r]=(0,b.useState)(`sealed`),i=`${$.groom[0]}${$.bride[0]}`;
+  let t=Bg(),[n,r]=(0,b.useState)(`sealed`);
   (0,b.useEffect)(()=>(c_(),()=>l_()),[]);
 
   let a=()=>{
@@ -49,66 +49,29 @@ new_cover_fn = '''function __({onOpen:e}){
         (0,O.jsx)(u_,{className:`absolute -bottom-px -left-px size-16 -scale-y-100 text-gold/60 sm:size-20`}),
         (0,O.jsx)(u_,{className:`absolute -right-px -bottom-px size-16 -scale-100 text-gold/60 sm:size-20`})
       ]}),
-      (0,O.jsxs)(`div`,{className:`relative flex h-full flex-col items-center justify-center px-8 text-center`,children:[
-        /* Image 1 marked sentence 1: ENGAGEMENT CEREMONY (much bigger font) */
+      (0,O.jsxs)(`div`,{className:`relative flex h-full flex-col items-center justify-center px-8 text-center select-none`,children:[
         (0,O.jsx)(`p`,{className:`caps text-[0.82rem] sm:text-[0.95rem] font-bold text-sepia tracking-[0.28em]`,children:`Engagement Ceremony`}),
         (0,O.jsx)(f_,{className:`mt-3 w-36 text-gold/80`}),
         (0,O.jsx)(`p`,{className:`script mt-4 text-[3.25rem] leading-tight text-ink sm:text-[4rem]`,children:`You're invited`}),
-        /* Image 1 marked sentence 2: JASH & KRISHA (much bigger font) */
-        (0,O.jsxs)(`p`,{className:`caps mt-4 text-[0.85rem] sm:text-[0.98rem] font-bold text-ink/90 tracking-[0.24em]`,children:[$.groom,` & `,$.bride]}),
-        (0,O.jsx)(`div`,{"aria-hidden":`true`,className:`h-60 shrink-0`}),
-        (0,O.jsx)(f_,{className:`w-28 rotate-180 text-gold/60`}),
-        /* Image 1 marked sentence 3: 13.11.26 (much bigger font, not cursive!) */
-        (0,O.jsx)(`p`,{className:`caps mt-5 text-[0.95rem] sm:text-base font-bold text-ink/90 tracking-[0.28em] font-sans`,children:$.dateLabel}),
-        /* Image 1 marked sentence 3: KHAMALAIMATA TEMPLE (much bigger font) */
-        (0,O.jsx)(`p`,{className:`caps mt-2.5 text-[0.75rem] sm:text-[0.85rem] font-bold text-sepia tracking-[0.22em]`,children:$.venue.name}),
-        /* Image 1 marked sentence 3: MANUND (much bigger font) */
-        (0,O.jsx)(`p`,{className:`caps mt-2 text-[0.7rem] sm:text-[0.8rem] font-semibold text-sepia/85 tracking-[0.25em]`,children:$.venue.city||`Manund`})
+        (0,O.jsxs)(`p`,{className:`caps mt-3 text-[0.88rem] sm:text-[1rem] font-bold text-ink/90 tracking-[0.24em]`,children:[$.groom,` & `,$.bride]}),
+        (0,O.jsx)(f_,{className:`my-4 w-28 rotate-180 text-gold/60`}),
+        (0,O.jsx)(`p`,{className:`caps text-[0.95rem] sm:text-base font-bold text-ink/90 tracking-[0.28em] font-sans`,children:$.dateLabel}),
+        (0,O.jsx)(`p`,{className:`caps mt-2 text-[0.75rem] sm:text-[0.85rem] font-bold text-sepia tracking-[0.22em]`,children:$.venue.name}),
+        (0,O.jsx)(`p`,{className:`caps mt-1.5 text-[0.7rem] sm:text-[0.8rem] font-semibold text-sepia/85 tracking-[0.25em]`,children:$.venue.city||`Manund`}),
+        (0,O.jsxs)(`div`,{className:`caps mt-7 flex items-center justify-center gap-3 text-[0.62rem] font-semibold text-sepia tracking-widest`,children:[
+          (0,O.jsx)(`span`,{className:`h-px w-8 bg-gold/70`}),
+          `Tap to open`,
+          (0,O.jsx)(`span`,{className:`h-px w-8 bg-gold/70`})
+        ]})
       ]})
     ]}),
     (0,O.jsx)(`div`,{"aria-hidden":`true`,className:`absolute inset-x-0 h-8 ${e===`top`?`bottom-0 bg-gradient-to-b from-transparent to-ink/10`:`top-0 bg-gradient-to-t from-transparent to-ink/6`}`})
   ]});
 
-  return (0,O.jsx)(Gp,{children:n!==`gone`&&(0,O.jsxs)(Q.div,{className:`fixed inset-0 z-50`,exit:{opacity:0},transition:{duration:.35},children:[
+  return (0,O.jsx)(Gp,{children:n!==`gone`&&(0,O.jsxs)(Q.div,{onClick:a,role:`button`,"aria-label":`Tap to open the invitation`,tabIndex:0,className:`fixed inset-0 z-50 cursor-pointer select-none`,exit:{opacity:0},transition:{duration:.35},children:[
     c(`top`),
     c(`bottom`),
     !t&&n===`sealed`&&(0,O.jsx)(`div`,{className:`pointer-events-none absolute inset-0 opacity-70`,children:(0,O.jsx)(h_,{count:9})}),
-    (0,O.jsxs)(`div`,{className:`absolute inset-0 flex flex-col items-center justify-center gap-8`,children:[
-      (0,O.jsx)(Gp,{children:n===`sealed`&&(0,O.jsxs)(Q.button,{
-        type:`button`,
-        onClick:a,
-        "aria-label":`Tap the seal to open the invitation`,
-        className:`relative grid size-44 shrink-0 place-items-center rounded-full`,
-        initial:{scale:.7,opacity:0},
-        animate:{scale:1,opacity:1},
-        exit:{scale:1.9,opacity:0,rotate:18},
-        transition:{duration:.65,ease:g_},
-        whileTap:{scale:.93},
-        children:[
-          (0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-0 text-gold/45`,animate:t?{}:{rotate:360},transition:{duration:90,repeat:1/0,ease:`linear`},children:(0,O.jsx)(d_,{className:`size-full`})}),
-          (0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-6 rounded-full border border-gold/50`,animate:t?{}:{scale:[1,1.4],opacity:[.55,0]},transition:{duration:2.6,repeat:1/0,ease:`easeOut`}}),
-          (0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-8 rounded-full`,style:{background:`radial-gradient(circle, color-mix(in oklab, var(--gold) 45%, transparent) 0%, transparent 70%)`},animate:t?{}:{opacity:[.5,.9,.5],scale:[.96,1.05,.96]},transition:{duration:3.4,repeat:1/0,ease:`easeInOut`}}),
-          (0,O.jsx)(`span`,{"aria-hidden":`true`,className:`absolute top-1/2 left-1/2 h-24 w-16 -translate-x-1/2 translate-y-4`,style:{background:`linear-gradient(180deg, color-mix(in oklab, var(--gold) 70%, transparent), transparent)`,clipPath:`polygon(28% 0, 72% 0, 100% 100%, 78% 84%, 50% 100%, 22% 84%, 0 100%)`,opacity:.55}}),
-          /* The Wax Seal Button Medallion - clean authentic monogram initials without crown logo */
-          (0,O.jsxs)(Q.span,{
-            "aria-hidden":`true`,
-            className:`relative grid size-24 place-items-center overflow-hidden text-paper shadow-[0_18px_40px_-16px_oklch(0.5_0.1_70)]`,
-            style:{
-              clipPath:`polygon(50% 0%, 68% 8%, 88% 6%, 94% 26%, 100% 50%, 94% 74%, 88% 94%, 68% 92%, 50% 100%, 32% 92%, 12% 94%, 6% 74%, 0% 50%, 6% 26%, 12% 6%, 32% 8%)`,
-              background:`radial-gradient(120% 120% at 30% 22%, oklch(0.85 0.09 88) 0%, oklch(0.72 0.1 78) 45%, oklch(0.58 0.09 66) 100%)`
-            },
-            animate:t?{}:{rotate:[-1.2,1.2,-1.2]},
-            transition:{duration:6,repeat:1/0,ease:`easeInOut`},
-            children:[
-              (0,O.jsx)(`span`,{"aria-hidden":`true`,className:`absolute inset-[7px] rounded-full border border-paper/35`}),
-              (0,O.jsx)(`span`,{className:`script relative text-[1.9rem] leading-none tracking-tight drop-shadow-[0_1px_0_oklch(0.5_0.09_66)] select-none`,children:i}),
-              !t&&(0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`absolute inset-y-[-40%] w-10 -skew-x-12 bg-paper/35 blur-[6px]`,animate:{x:[`-140%`,`420%`]},transition:{duration:1.5,repeat:1/0,repeatDelay:3.4,ease:`easeInOut`}})
-            ]
-          })
-        ]
-      })}),
-      (0,O.jsx)(Gp,{children:n===`sealed`&&(0,O.jsxs)(Q.span,{className:`caps flex items-center gap-3 text-[0.6rem] font-semibold text-sepia tracking-widest`,initial:{opacity:0},animate:{opacity:[.4,1,.4]},exit:{opacity:0,transition:{duration:.25,repeat:0}},transition:{duration:2.6,repeat:1/0,ease:`easeInOut`},children:[(0,O.jsx)(`span`,{className:`h-px w-7 bg-gold/70`}),`Tap to open`,(0,O.jsx)(`span`,{className:`h-px w-7 bg-gold/70`})]})})
-    ]}),
     n===`breaking`&&!t&&(0,O.jsx)(m_,{count:44,spread:340,seed:3})
   ]})})}'''
 c = c[:s_seal] + new_cover_fn + c[e_seal:]
@@ -226,14 +189,20 @@ new_d_fn = '''function D_(){
         (0,O.jsx)(`span`,{className:`caps absolute bottom-4 left-1/2 flex min-h-11 -translate-x-1/2 items-center rounded-full bg-paper/90 px-6 text-[0.54rem] text-ink shadow-md backdrop-blur-md border border-gold/30 font-semibold`,children:`Open in Google Maps`})
       ]})
     })}),
-    (0,O.jsx)(Xg,{delay:.22,children:(0,O.jsx)(Q.a,{
+    (0,O.jsx)(Xg,{delay:.22,children:(0,O.jsxs)(Q.a,{
       href:Hg,
       target:`_blank`,
       rel:`noopener noreferrer`,
       onClick:E_,
-      whileTap:{scale:.96},
-      className:`caps mt-6 inline-flex min-h-14 items-center gap-2 rounded-full bg-ink px-9 text-[0.55rem] text-paper shadow-md transition-all duration-500 hover:opacity-90 hover:scale-[1.02] font-semibold`,
-      children:`View Location`
+      whileTap:{scale:.97},
+      className:`view-location-btn`,
+      children:[
+        (0,O.jsx)(`svg`,{className:`size-4 text-gold shrink-0`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,children:(0,O.jsxs)(O.Fragment,{children:[
+          (0,O.jsx)(`path`,{d:`M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z`}),
+          (0,O.jsx)(`circle`,{cx:`12`,cy:`10`,r:`3`})
+        ]})}),
+        `VIEW LOCATION`
+      ]
     })})
   ]});
 }'''
