@@ -50,18 +50,45 @@ new_cover_fn = '''function __({onOpen:e}){
         (0,O.jsx)(u_,{className:`absolute -right-px -bottom-px size-16 -scale-100 text-gold/60 sm:size-20`})
       ]}),
       (0,O.jsxs)(`div`,{className:`relative flex h-full flex-col items-center justify-center px-8 text-center select-none`,children:[
-        (0,O.jsx)(`p`,{className:`caps text-[0.82rem] sm:text-[0.95rem] font-bold text-sepia tracking-[0.28em]`,children:`Engagement Ceremony`}),
-        (0,O.jsx)(f_,{className:`mt-3 w-36 text-gold/80`}),
-        (0,O.jsx)(`p`,{className:`script mt-4 text-[3.25rem] leading-tight text-ink sm:text-[4rem]`,children:`You're invited`}),
-        (0,O.jsxs)(`p`,{className:`caps mt-3 text-[0.88rem] sm:text-[1rem] font-bold text-ink/90 tracking-[0.24em]`,children:[$.groom,` & `,$.bride]}),
-        (0,O.jsx)(f_,{className:`my-4 w-28 rotate-180 text-gold/60`}),
-        (0,O.jsx)(`p`,{className:`caps text-[0.95rem] sm:text-base font-bold text-ink/90 tracking-[0.28em] font-sans`,children:$.dateLabel}),
-        (0,O.jsx)(`p`,{className:`caps mt-2 text-[0.75rem] sm:text-[0.85rem] font-bold text-sepia tracking-[0.22em]`,children:$.venue.name}),
-        (0,O.jsx)(`p`,{className:`caps mt-1.5 text-[0.7rem] sm:text-[0.8rem] font-semibold text-sepia/85 tracking-[0.25em]`,children:$.venue.city||`Manund`}),
-        (0,O.jsxs)(`div`,{className:`caps mt-7 flex items-center justify-center gap-3 text-[0.62rem] font-semibold text-sepia tracking-widest`,children:[
-          (0,O.jsx)(`span`,{className:`h-px w-8 bg-gold/70`}),
-          `Tap to open`,
-          (0,O.jsx)(`span`,{className:`h-px w-8 bg-gold/70`})
+        /* Royal Monogram Emblem / Logo (Request 1) */
+        (0,O.jsxs)(`div`,{className:`entrance-logo-wrapper mb-2 sm:mb-3 flex flex-col items-center justify-center select-none`,children:[
+          (0,O.jsxs)(`svg`,{viewBox:`0 0 100 100`,className:`size-14 sm:size-16 text-gold drop-shadow-sm`,fill:`none`,"aria-hidden":`true`,children:[
+            (0,O.jsx)(`circle`,{cx:`50`,cy:`52`,r:`43`,stroke:`currentColor`,strokeWidth:`1`,strokeDasharray:`2 3`,opacity:`.6`}),
+            (0,O.jsx)(`circle`,{cx:`50`,cy:`52`,r:`39`,stroke:`currentColor`,strokeWidth:`1.2`,opacity:`.85`}),
+            (0,O.jsx)(`circle`,{cx:`50`,cy:`52`,r:`35`,stroke:`currentColor`,strokeWidth:`.6`,opacity:`.5`}),
+            (0,O.jsx)(`path`,{d:`M38 22 L35 12 L43 17 L50 9 L57 17 L65 12 L62 22 Z`,fill:`currentColor`,opacity:`.9`}),
+            (0,O.jsx)(`circle`,{cx:`50`,cy:`7.5`,r:`1.5`,fill:`currentColor`}),
+            (0,O.jsx)(`circle`,{cx:`35`,cy:`10.5`,r:`1.2`,fill:`currentColor`}),
+            (0,O.jsx)(`circle`,{cx:`65`,cy:`10.5`,r:`1.2`,fill:`currentColor`}),
+            (0,O.jsx)(`text`,{x:`50`,y:`58`,textAnchor:`middle`,className:`font-serif font-semibold`,style:{fontSize:`18px`,fill:`currentColor`,letterSpacing:`0.06em`},children:$.monogram||`J & K`}),
+            (0,O.jsx)(`path`,{d:`M42 66 Q50 70 58 66`,stroke:`currentColor`,strokeWidth:`.8`,strokeLinecap:`round`,opacity:`.7`}),
+            (0,O.jsx)(`circle`,{cx:`50`,cy:`70`,r:`1`,fill:`currentColor`})
+          ]})
+        ]}),
+        /* Marked 1: ENGAGEMENT CEREMONY (medium, unbold) */
+        (0,O.jsx)(`p`,{className:`caps entrance-event-type text-[0.64rem] sm:text-[0.72rem] font-medium text-sepia tracking-[0.26em]`,children:$.eventType||`Engagement Ceremony`}),
+        (0,O.jsx)(f_,{className:`mt-2.5 w-32 text-gold/75`}),
+        (0,O.jsx)(`p`,{className:`script mt-3 text-[3rem] leading-tight text-ink sm:text-[3.75rem]`,children:`You're invited`}),
+        /* Marked 1: JASH & KRISHA (unbold names, change colour to gold, medium size) */
+        (0,O.jsxs)(`p`,{className:`caps entrance-names mt-2.5 text-[0.74rem] sm:text-[0.82rem] font-medium text-gold tracking-[0.24em]`,children:[$.groom,` & `,$.bride]}),
+        (0,O.jsx)(f_,{className:`my-3 w-28 rotate-180 text-gold/60`}),
+        /* Marked 1: 13.11.26 (medium, unbold) */
+        (0,O.jsx)(`p`,{className:`caps entrance-date text-[0.76rem] sm:text-[0.84rem] font-medium text-ink/80 tracking-[0.26em] font-sans`,children:$.dateLabel}),
+        /* Marked 1: KHAMALAIMATA TEMPLE (medium, unbold) */
+        (0,O.jsx)(`p`,{className:`caps entrance-venue mt-2 text-[0.62rem] sm:text-[0.7rem] font-medium text-sepia tracking-[0.22em]`,children:$.venue.name}),
+        /* Marked 1: MANUND (medium, unbold) */
+        (0,O.jsx)(`p`,{className:`caps entrance-city mt-1.5 text-[0.58rem] sm:text-[0.66rem] font-medium text-sepia/80 tracking-[0.24em]`,children:$.venue.city||`Manund`}),
+        /* Marked 3: TAP TO OPEN with Blink Sign (impossible to miss, glowing pulse, blinking beacon) */
+        (0,O.jsxs)(`div`,{className:`entrance-tap-container`,children:[
+          (0,O.jsxs)(`div`,{className:`entrance-tap-pill`,children:[
+            (0,O.jsxs)(`span`,{className:`entrance-blink-sign`,"aria-hidden":`true`,children:[
+              (0,O.jsx)(`span`,{className:`entrance-blink-ring`}),
+              (0,O.jsx)(`span`,{className:`entrance-blink-dot`})
+            ]}),
+            (0,O.jsx)(`span`,{className:`entrance-tap-text`,children:`TAP TO OPEN`}),
+            (0,O.jsx)(`span`,{className:`entrance-tap-sparkle`,"aria-hidden":`true`,children:`✦`})
+          ]}),
+          (0,O.jsx)(`span`,{className:`entrance-tap-hint`,children:`Touch anywhere to unseal`})
         ]})
       ]})
     ]}),
@@ -274,8 +301,8 @@ function FamilySection_(){
               /* Mom's name first, then father (Item 3) */
               (0,O.jsx)(`p`,{className:`mt-2 text-base sm:text-lg text-ink/90 font-serif leading-relaxed`,children:groomParents})
             ]}),
-            /* Image 2 marked sentence: Patel Family • Manund (MUCH BIGGER, Item 8) */
-            (0,O.jsx)(`p`,{className:`caps text-[0.82rem] sm:text-[0.92rem] font-bold text-sepia/90 mt-5 tracking-[0.2em]`,children:`Patel Family • Manund`})
+            /* Image 2 marked sentence: Patel Family • Manund (medium & unbold, Request 2) */
+            (0,O.jsx)(`p`,{className:`caps family-location-tag text-[0.64rem] sm:text-[0.72rem] font-medium text-sepia/85 mt-4 tracking-[0.2em]`,children:`Patel Family • Manund`})
           ]
         }),
 
@@ -290,8 +317,8 @@ function FamilySection_(){
               /* Mom's name first, then father (Item 3) */
               (0,O.jsx)(`p`,{className:`mt-2 text-base sm:text-lg text-ink/90 font-serif leading-relaxed`,children:brideParents})
             ]}),
-            /* Image 2 marked sentence: Patel Family • Balisana (MUCH BIGGER, Items 4 & 8) */
-            (0,O.jsx)(`p`,{className:`caps text-[0.82rem] sm:text-[0.92rem] font-bold text-sepia/90 mt-5 tracking-[0.2em]`,children:`Patel Family • Balisana`})
+            /* Image 2 marked sentence: Patel Family • Balisana (medium & unbold, Request 2) */
+            (0,O.jsx)(`p`,{className:`caps family-location-tag text-[0.64rem] sm:text-[0.72rem] font-medium text-sepia/85 mt-4 tracking-[0.2em]`,children:`Patel Family • Balisana`})
           ]
         })
       ]

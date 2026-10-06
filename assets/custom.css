@@ -224,3 +224,210 @@
     height: 42px;
   }
 }
+
+/* =========================================================
+   ENTRANCE SCREEN TYPOGRAPHY & LOGO (Request 1)
+   ========================================================= */
+.entrance-logo-wrapper {
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.25));
+  transition: transform 0.4s ease;
+}
+
+.entrance-logo-wrapper:hover {
+  transform: scale(1.04);
+}
+
+.entrance-event-type {
+  font-size: 0.65rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.26em !important;
+  color: var(--sepia, #8E6F3E) !important;
+  text-transform: uppercase !important;
+}
+
+/* Unbold names and change color to radiant royal gold */
+.entrance-names {
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.24em !important;
+  color: var(--gold, #D4AF37) !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.2);
+}
+
+/* Medium, unbolded event date & venue */
+.entrance-date {
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.25em !important;
+  color: var(--ink, #20150b) !important;
+  opacity: 0.88 !important;
+}
+
+.entrance-venue {
+  font-size: 0.64rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.22em !important;
+  color: var(--sepia, #8E6F3E) !important;
+  opacity: 0.9 !important;
+}
+
+.entrance-city {
+  font-size: 0.58rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.24em !important;
+  color: var(--sepia, #8E6F3E) !important;
+  opacity: 0.78 !important;
+}
+
+/* =========================================================
+   TAP TO OPEN INTERACTIVE PILL & BLINK SIGN (Request 3)
+   ========================================================= */
+.entrance-tap-container {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.entrance-tap-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 8px 22px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--paper, #FAF5EC) 94%, #ffffff);
+  border: 1.5px solid color-mix(in oklab, var(--gold, #D4AF37) 85%, transparent);
+  box-shadow: 0 4px 18px -2px rgba(212, 175, 55, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation: tapPulseGlow 2.2s infinite ease-in-out;
+}
+
+.entrance-tap-pill:hover {
+  transform: scale(1.05);
+  border-color: var(--gold, #D4AF37);
+  box-shadow: 0 6px 26px rgba(212, 175, 55, 0.65);
+}
+
+@keyframes tapPulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 18px -2px rgba(212, 175, 55, 0.35), 0 0 0 0 rgba(212, 175, 55, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 26px 2px rgba(212, 175, 55, 0.6), 0 0 0 9px rgba(212, 175, 55, 0);
+    transform: scale(1.035);
+  }
+}
+
+/* Blinking Indicator Beacon Sign */
+.entrance-blink-sign {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+}
+
+.entrance-blink-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D4AF37;
+  box-shadow: 0 0 8px #D4AF37;
+  animation: tapBlinkBeacon 1.2s infinite ease-in-out;
+}
+
+.entrance-blink-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.2px solid #D4AF37;
+  animation: tapBeaconRing 1.2s infinite ease-out;
+}
+
+@keyframes tapBlinkBeacon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    background: #D4AF37;
+    box-shadow: 0 0 10px #D4AF37;
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(0.65);
+    background: #8E6F3E;
+    box-shadow: 0 0 2px transparent;
+  }
+}
+
+@keyframes tapBeaconRing {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.entrance-tap-text {
+  font-size: 0.66rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  color: var(--ink, #20150b) !important;
+  text-transform: uppercase !important;
+}
+
+.entrance-tap-sparkle {
+  color: var(--gold, #D4AF37);
+  font-size: 0.72rem;
+  animation: sparkleNudge 1.6s infinite ease-in-out;
+}
+
+@keyframes sparkleNudge {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.2) rotate(14deg);
+    opacity: 1;
+  }
+}
+
+.entrance-tap-hint {
+  font-size: 0.48rem !important;
+  letter-spacing: 0.18em !important;
+  color: var(--sepia, #8E6F3E) !important;
+  opacity: 0.72 !important;
+  text-transform: uppercase !important;
+  animation: hintBlink 2.4s infinite ease-in-out;
+}
+
+@keyframes hintBlink {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 0.35; }
+}
+
+/* =========================================================
+   FAMILY SECTION (Request 2)
+   Unbold and medium size for Patel Family • Manund / Balisana
+   ========================================================= */
+.family-location-tag {
+  font-size: 0.64rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+  color: var(--sepia, #8E6F3E) !important;
+  opacity: 0.88 !important;
+  text-transform: uppercase !important;
+  margin-top: 18px !important;
+}
+
