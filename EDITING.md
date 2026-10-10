@@ -33,10 +33,9 @@ All customer data is managed in:
 - `venue.directionsUrl`: Configurable link (empty by default until customer supplies exact link; falls back safely to address search without fake links).
 
 ### 5. Photographs
-- **Customer Photos**:
-  - `editable/assets/customer-photo-1.jpg`: Customer supplied photo (toddler with toy), respectfully labeled "Cherished Moments".
-  - `editable/assets/customer-photo-2.jpg`: Customer supplied photo (toddler in magenta), respectfully labeled "Sweet Memories".
-- Additional customer photos can be added directly into `images.customerPhotos` array.
+- **Couple Photograph**:
+  - `editable/assets/couple-photo.jpg` & `editable/assets/couple.png`: Customer supplied couple portrait of Jash & Krisha in traditional attire, featured on the Hero screen and Photo Gallery.
+  - Additional customer photos can be added directly into `images.customerPhotos` array in `editable/wedding-data.js`.
 
 ### 6. Music / Audio
 - `audio.enabled`: `true`

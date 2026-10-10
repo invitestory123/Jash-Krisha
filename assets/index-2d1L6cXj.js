@@ -107,25 +107,41 @@ Error generating stack: `+e.message+`
     n?n.scrollTo(e,{duration:1.4,offset:-20}):e.scrollIntoView({behavior:`smooth`});
   };
 
-  return (0,O.jsxs)(`section`,{ref:t,onPointerDown:u,className:`relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 py-16 text-center select-none`,children:[
+  return (0,O.jsxs)(`section`,{ref:t,onPointerDown:u,className:`relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-6 py-12 text-center select-none`,children:[
     (0,O.jsx)(h_,{}),
     o.map(e=>(0,O.jsx)(m_,{x:e.x,y:e.y,count:14,spread:130,seed:e.id%11},e.id)),
+    /* Royal Monogram Emblem / Logo on Hero First Page (Request 1) */
+    (0,O.jsxs)(Q.div,{className:`hero-logo-wrapper mb-2.5 flex flex-col items-center justify-center select-none`,initial:{opacity:0,scale:.9},animate:e?{opacity:1,scale:1}:{opacity:0,scale:.9},transition:{duration:.9,ease:c},children:[
+      (0,O.jsxs)(`svg`,{viewBox:`0 0 100 100`,className:`size-14 sm:size-16 text-gold drop-shadow-sm`,fill:`none`,"aria-hidden":`true`,children:[
+        (0,O.jsx)(`circle`,{cx:`50`,cy:`52`,r:`43`,stroke:`currentColor`,strokeWidth:`1`,strokeDasharray:`2 3`,opacity:`.6`}),
+        (0,O.jsx)(`circle`,{cx:`50`,cy:`52`,r:`39`,stroke:`currentColor`,strokeWidth:`1.2`,opacity:`.85`}),
+        (0,O.jsx)(`circle`,{cx:`50`,cy:`35`,r:`35`,stroke:`currentColor`,strokeWidth:`.6`,opacity:`.5`}),
+        (0,O.jsx)(`path`,{d:`M38 22 L35 12 L43 17 L50 9 L57 17 L65 12 L62 22 Z`,fill:`currentColor`,opacity:`.9`}),
+        (0,O.jsx)(`circle`,{cx:`50`,cy:`7.5`,r:`1.5`,fill:`currentColor`}),
+        (0,O.jsx)(`circle`,{cx:`35`,cy:`10.5`,r:`1.2`,fill:`currentColor`}),
+        (0,O.jsx)(`circle`,{cx:`65`,cy:`10.5`,r:`1.2`,fill:`currentColor`}),
+        (0,O.jsx)(`text`,{x:`50`,y:`58`,textAnchor:`middle`,className:`font-serif font-semibold`,style:{fontSize:`18px`,fill:`currentColor`,letterSpacing:`0.06em`},children:$.monogram||`J & K`}),
+        (0,O.jsx)(`path`,{d:`M42 66 Q50 70 58 66`,stroke:`currentColor`,strokeWidth:`.8`,strokeLinecap:`round`,opacity:`.7`}),
+        (0,O.jsx)(`circle`,{cx:`50`,cy:`70`,r:`1`,fill:`currentColor`})
+      ]})
+    ]}),
     (0,O.jsx)(Q.p,{className:`caps text-[0.68rem] text-gold tracking-[0.25em] font-bold sm:text-xs`,initial:{opacity:0,y:12},animate:e?{opacity:1,y:0}:{opacity:0,y:12},transition:{duration:1,ease:c},children:`ENGAGEMENT CEREMONY`}),
     /* Date on Hero: NOT CURSIVE (Item 5) */
-    (0,O.jsx)(Q.p,{className:`font-serif mt-3 text-3xl sm:text-5xl font-semibold tracking-wide text-ink`,initial:{opacity:0,y:16},animate:e?{opacity:1,y:0}:{opacity:0,y:16},transition:{duration:1.1,delay:.15,ease:c},children:$.displayDate||`13 November 2026`}),
-    (0,O.jsx)(Q.p,{className:`caps mt-2 text-xs sm:text-sm text-sepia tracking-widest font-bold`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:.2},children:`9:00 AM`}),
-    /* Couple holding child frames (Item 2) */
-    (0,O.jsx)(Q.div,{style:{y:r,opacity:a},className:`mt-6 w-full max-w-sm sm:max-w-md`,children:(0,O.jsx)(Q.img,{src:y_,alt:`Illustration of Jash & Krisha holding photo frames`,width:1024,height:1024,draggable:!1,className:`mx-auto w-full select-none`,initial:{opacity:0,scale:.96},animate:e?{opacity:1,scale:1}:{opacity:0,scale:.96},transition:{duration:1.4,delay:.3,ease:c}})}),
-    (0,O.jsx)(Q.p,{className:`caps mt-6 max-w-md text-[0.65rem] leading-[2] text-olive font-semibold sm:text-xs`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:.7},children:$.invitationLine||`Cordially invite you to celebrate the Engagement Ceremony of`}),
-    (0,O.jsxs)(Q.h1,{className:`script mt-3 text-[3.25rem] leading-[1.05] text-ink sm:text-7xl`,initial:`hidden`,animate:l,children:[
-      (0,O.jsx)(Zg,{text:$.groom,delay:.85,trigger:l}),
+    (0,O.jsx)(Q.p,{className:`font-serif mt-2.5 text-3xl sm:text-5xl font-semibold tracking-wide text-ink`,initial:{opacity:0,y:16},animate:e?{opacity:1,y:0}:{opacity:0,y:16},transition:{duration:1.1,delay:.15,ease:c},children:$.displayDate||`13 November 2026`}),
+    (0,O.jsx)(Q.p,{className:`caps mt-1.5 text-xs sm:text-sm text-sepia tracking-widest font-bold`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:.2},children:`9:00 AM`}),
+    /* Couple photograph of Jash & Krisha (Item 3) */
+    (0,O.jsx)(Q.div,{style:{y:r,opacity:a},className:`mt-4 w-full max-w-[270px] sm:max-w-xs mx-auto`,children:(0,O.jsx)(`div`,{className:`relative mx-auto aspect-square overflow-hidden rounded-2xl border-2 border-gold/45 shadow-[0_14px_36px_-14px_rgba(60,45,25,0.45)]`,children:(0,O.jsx)(Q.img,{src:y_,alt:`Jash & Krisha`,width:1024,height:1024,draggable:!1,className:`size-full object-cover select-none`,initial:{opacity:0,scale:.96},animate:e?{opacity:1,scale:1}:{opacity:0,scale:.96},transition:{duration:1.2,delay:.25,ease:c}})})}),
+    (0,O.jsx)(Q.p,{className:`caps mt-4 max-w-md text-[0.65rem] leading-[2] text-olive font-semibold sm:text-xs`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:.45},children:$.invitationLine||`Cordially invite you to celebrate the Engagement Ceremony of`}),
+    (0,O.jsxs)(Q.h1,{className:`script mt-2.5 text-[3.25rem] leading-[1.05] text-ink sm:text-7xl`,initial:`hidden`,animate:l,children:[
+      (0,O.jsx)(Zg,{text:$.groom,delay:.55,trigger:l}),
       (0,O.jsx)(`span`,{className:`mx-3 text-gold sm:mx-5`,children:`&`}),
-      (0,O.jsx)(Zg,{text:$.bride,delay:1.2,trigger:l})
+      (0,O.jsx)(Zg,{text:$.bride,delay:.8,trigger:l})
     ]}),
-    (0,O.jsx)(`p`,{className:`caps mt-3 text-[0.58rem] text-sepia/85 tracking-[0.2em] font-semibold`,children:`Khamalaimata Temple, Manund, Gujarat`}),
-    (0,O.jsxs)(Q.button,{type:`button`,onClick:e=>{e.stopPropagation(),d()},"aria-label":`Scroll to the invitation`,className:`mt-8 flex min-h-14 flex-col items-center justify-end gap-2 px-8 pb-1`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:1.8},whileTap:{scale:.95},children:[
-      (0,O.jsx)(`span`,{className:`caps text-[0.5rem] tracking-[0.25em] text-sepia`,children:`Scroll`}),
-      (0,O.jsx)(Q.span,{"aria-hidden":`true`,className:`size-2 rotate-45 border-b border-r border-sepia`,animate:{y:[0,4,0]},transition:{duration:1.6,repeat:1/0,ease:`easeInOut`}})
+    (0,O.jsx)(`p`,{className:`caps mt-2 text-[0.58rem] text-sepia/85 tracking-[0.2em] font-semibold`,children:`Khamalaimata Temple, Manund, Gujarat`}),
+    /* Scroll down button prominently visible when opened (Item 2) */
+    (0,O.jsxs)(Q.button,{type:`button`,onClick:e=>{e.stopPropagation(),d()},"aria-label":`Scroll to invitation details`,className:`hero-scroll-btn`,initial:{opacity:0,y:10},animate:e?{opacity:1,y:0}:{opacity:0,y:10},transition:{duration:.6,delay:.35},whileTap:{scale:.95},children:[
+      (0,O.jsx)(`span`,{className:`hero-scroll-text`,children:`SCROLL DOWN`}),
+      (0,O.jsx)(`svg`,{className:`hero-scroll-icon`,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2.5`,children:(0,O.jsx)(`path`,{d:`M6 9l6 6 6-6`})})
     ]})
   ]});
 }var x_=_wm.footerBg??_w.footerBg??`./editable/assets/footer-bg.jpg`;function S_(){let e=(0,b.useRef)(null),{y:t}=v_(e,[-70,40],[`start end`,`end end`]);return(0,O.jsxs)(`footer`,{ref:e,className:`grain relative flex min-h-[70svh] items-center justify-center overflow-hidden px-6 pb-36 pt-24 text-center`,children:[(0,O.jsx)(Q.img,{src:x_,alt:``,"aria-hidden":`true`,width:1536,height:1024,loading:`lazy`,style:{y:t},className:`absolute inset-0 size-full scale-125 object-cover will-change-transform`}),(0,O.jsx)(`div`,{"aria-hidden":`true`,className:`absolute inset-0 bg-paper/72`}),(0,O.jsx)(`div`,{"aria-hidden":`true`,className:`absolute inset-0 bg-gradient-to-b from-paper via-transparent to-paper/90`}),(0,O.jsxs)(`div`,{className:`relative`,children:[(0,O.jsx)(Q.p,{className:`caps text-[0.58rem] text-sepia`,initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{duration:1.2},children:$.closing}),(0,O.jsxs)(`p`,{className:`script mt-5 text-5xl leading-[1.1] text-ink sm:text-6xl`,children:[(0,O.jsx)(Zg,{text:$.groom}),(0,O.jsx)(`span`,{className:`mx-3 text-gold`,children:`&`}),(0,O.jsx)(Zg,{text:$.bride,delay:.3})]}),(0,O.jsxs)(Q.p,{className:`caps mt-8 text-[0.5rem] text-sepia/80`,initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{duration:1.2,delay:.4},children:[$.dateLabel,` · `,$.venue.name]}),(0,O.jsx)(Q.a,{href:`https://www.instagram.com/invitestory.in/`,target:`_blank`,rel:`noreferrer`,className:`caps mt-4 inline-block text-[0.5rem] text-sepia/70 transition-colors hover:text-sepia`,initial:{opacity:0},whileInView:{opacity:1},viewport:{once:!0},transition:{duration:1.2,delay:.5},children:`Follow @invitestory.in on Instagram`})]})]})}function C_(){
@@ -285,8 +301,10 @@ function FamilySection_(){
   ]});
 }
 
-/* Photo Section: Contextual customer photos without blank couple placeholder */
+/* Photo Section: Couple Portrait with Cherished Moments (Item 3: child photos removed, couple photo added) */
 function PhotoSection_(){
+  let couplePhotoSrc = ($.images && ($.images.couplePhoto || $.images.couple)) || `./editable/assets/couple-photo.jpg`;
+
   return (0,O.jsxs)(`section`,{id:`photo-gallery`,className:`px-6 py-14 text-center sm:py-20 max-w-4xl mx-auto`,children:[
     (0,O.jsxs)(Xg,{children:[
       (0,O.jsx)(Yg,{className:`mb-8`}),
@@ -295,47 +313,26 @@ function PhotoSection_(){
       (0,O.jsx)(`p`,{className:`caps mt-2 text-[0.52rem] tracking-[0.22em] text-sepia/80`,children:`Moments of Joy & Celebration`})
     ]}),
 
-    (0,O.jsx)(Xg,{delay:.18,children:(0,O.jsxs)(`div`,{
-      className:`mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto items-stretch`,
-      children:[
-        /* 1. Customer Photo 1 (Baby Jash) */
-        (0,O.jsxs)(`div`,{
-          className:`photo-card flex flex-col justify-between`,
-          children:[
-            (0,O.jsx)(`div`,{className:`photo-image-wrapper`,children:
-              (0,O.jsx)(`img`,{
-                src:`./editable/assets/customer-photo-1.jpg`,
-                alt:`Cherished Moments`,
-                loading:`lazy`,
-                className:`size-full object-cover`
-              })
-            }),
-            (0,O.jsxs)(`div`,{className:`mt-3`,children:[
-              (0,O.jsx)(`p`,{className:`caps text-[0.56rem] font-bold text-ink tracking-wider`,children:`Cherished Moments`}),
-              (0,O.jsx)(`p`,{className:`text-[0.5rem] text-sepia/70 mt-0.5 tracking-wide`,children:`Family Memories`})
-            ]})
-          ]
-        }),
-
-        /* 2. Customer Photo 2 (Baby Krisha) */
-        (0,O.jsxs)(`div`,{
-          className:`photo-card flex flex-col justify-between`,
-          children:[
-            (0,O.jsx)(`div`,{className:`photo-image-wrapper`,children:
-              (0,O.jsx)(`img`,{
-                src:`./editable/assets/customer-photo-2.jpg`,
-                alt:`Sweet Memories`,
-                loading:`lazy`,
-                className:`size-full object-cover`
-              })
-            }),
-            (0,O.jsxs)(`div`,{className:`mt-3`,children:[
-              (0,O.jsx)(`p`,{className:`caps text-[0.56rem] font-bold text-ink tracking-wider`,children:`Sweet Memories`}),
-              (0,O.jsx)(`p`,{className:`text-[0.5rem] text-sepia/70 mt-0.5 tracking-wide`,children:`Family Moments`})
-            ]})
-          ]
-        })
-      ]
+    (0,O.jsx)(Xg,{delay:.18,children:(0,O.jsx)(`div`,{
+      className:`mt-10 max-w-md mx-auto`,
+      children:(0,O.jsxs)(`div`,{
+        className:`photo-card flex flex-col justify-between p-4 sm:p-5`,
+        children:[
+          (0,O.jsx)(`div`,{className:`photo-image-wrapper aspect-square rounded-xl overflow-hidden shadow-md border border-gold/40`,children:
+            (0,O.jsx)(`img`,{
+              src:couplePhotoSrc,
+              alt:`Jash & Krisha`,
+              loading:`lazy`,
+              className:`size-full object-cover`
+            })
+          }),
+          (0,O.jsxs)(`div`,{className:`mt-4 text-center`,children:[
+            (0,O.jsx)(`p`,{className:`caps text-[0.68rem] font-bold text-ink tracking-wider`,children:`Jash & Krisha`}),
+            (0,O.jsx)(`p`,{className:`script text-2xl text-gold mt-1`,children:`Together Forever`}),
+            (0,O.jsx)(`p`,{className:`caps text-[0.52rem] text-sepia/75 mt-1 tracking-widest`,children:`Cherished Moments • Engagement Celebration`})
+          ]})
+        ]
+      })
     })})
   ]});
 }

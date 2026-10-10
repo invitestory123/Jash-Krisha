@@ -94,19 +94,14 @@ window.WEDDING_DATA = {
     customerPhotos: [
       {
         id: "photo-1",
-        url: "./editable/assets/customer-photo-1.jpg",
-        caption: "Cherished Moments",
-        captionGu: "સ્મૃતિ પળો",
-      },
-      {
-        id: "photo-2",
-        url: "./editable/assets/customer-photo-2.jpg",
-        caption: "Sweet Memories",
-        captionGu: "મીઠી યાદો",
+        url: "./editable/assets/couple-photo.jpg",
+        caption: "Cherished Moments • Jash & Krisha",
+        captionGu: "સ્મૃતિ પળો • જશ અને ક્રિશા",
       },
     ],
     // Replaceable template assets
     couple: "./editable/assets/couple.png",
+    couplePhoto: "./editable/assets/couple-photo.jpg",
     footerBg: "./editable/assets/footer-bg.jpg",
     map: "./editable/assets/map.jpg",
   },

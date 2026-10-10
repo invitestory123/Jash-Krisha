@@ -431,3 +431,75 @@
   margin-top: 18px !important;
 }
 
+/* =========================================================
+   HERO FIRST PAGE LOGO & SCROLL DOWN BUTTON (Requests 1 & 2)
+   ========================================================= */
+.hero-logo-wrapper {
+  filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
+  transition: transform 0.4s ease;
+}
+
+.hero-logo-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* Prominently visible scroll down button when opened */
+.hero-scroll-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 22px !important;
+  padding: 9px 24px !important;
+  border-radius: 9999px !important;
+  background: color-mix(in oklab, var(--paper, #FAF5EC) 95%, #ffffff) !important;
+  border: 1.5px solid color-mix(in oklab, var(--gold, #D4AF37) 80%, transparent) !important;
+  box-shadow: 0 4px 18px -2px rgba(212, 175, 55, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.7) inset !important;
+  color: var(--ink, #20150b) !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+  animation: heroScrollPillPulse 2.2s infinite ease-in-out !important;
+}
+
+.hero-scroll-btn:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  border-color: var(--gold, #D4AF37) !important;
+  box-shadow: 0 8px 26px -2px rgba(212, 175, 55, 0.65) !important;
+}
+
+.hero-scroll-text {
+  font-size: 0.64rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  color: var(--ink, #20150b) !important;
+}
+
+.hero-scroll-icon {
+  width: 14px !important;
+  height: 14px !important;
+  color: var(--gold, #D4AF37) !important;
+  animation: heroChevronBob 1.5s infinite ease-in-out !important;
+}
+
+@keyframes heroScrollPillPulse {
+  0%, 100% {
+    box-shadow: 0 4px 18px -2px rgba(212, 175, 55, 0.35), 0 0 0 0 rgba(212, 175, 55, 0.45);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 6px 24px 2px rgba(212, 175, 55, 0.6), 0 0 0 8px rgba(212, 175, 55, 0);
+    transform: translateY(3px);
+  }
+}
+
+@keyframes heroChevronBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+
