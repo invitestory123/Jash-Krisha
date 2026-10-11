@@ -101,6 +101,8 @@ window.WEDDING_DATA = {
     ],
     // Replaceable template assets
     couple: "./editable/assets/couple.png",
+    groomPhoto: "./editable/assets/groom.png",
+    bridePhoto: "./editable/assets/bride.png",
     couplePhoto: "./editable/assets/couple-photo.jpg",
     footerBg: "./editable/assets/footer-bg.jpg",
     map: "./editable/assets/map.jpg",

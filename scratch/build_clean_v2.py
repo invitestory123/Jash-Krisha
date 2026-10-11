@@ -150,8 +150,8 @@ new_b_fn = '''function b_({ready:e=!0}){
     /* Date on Hero: NOT CURSIVE (Item 5) */
     (0,O.jsx)(Q.p,{className:`font-serif mt-2.5 text-3xl sm:text-5xl font-semibold tracking-wide text-ink`,initial:{opacity:0,y:16},animate:e?{opacity:1,y:0}:{opacity:0,y:16},transition:{duration:1.1,delay:.15,ease:c},children:$.displayDate||`13 November 2026`}),
     (0,O.jsx)(Q.p,{className:`caps mt-1.5 text-xs sm:text-sm text-sepia tracking-widest font-bold`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:.2},children:`9:00 AM`}),
-    /* Couple photograph of Jash & Krisha (Item 3) */
-    (0,O.jsx)(Q.div,{style:{y:r,opacity:a},className:`mt-4 w-full max-w-[270px] sm:max-w-xs mx-auto`,children:(0,O.jsx)(`div`,{className:`relative mx-auto aspect-square overflow-hidden rounded-2xl border-2 border-gold/45 shadow-[0_14px_36px_-14px_rgba(60,45,25,0.45)]`,children:(0,O.jsx)(Q.img,{src:y_,alt:`Jash & Krisha`,width:1024,height:1024,draggable:!1,className:`size-full object-cover select-none`,initial:{opacity:0,scale:.96},animate:e?{opacity:1,scale:1}:{opacity:0,scale:.96},transition:{duration:1.2,delay:.25,ease:c}})})}),
+    /* Couple holding photo frames with Jash & Krisha */
+    (0,O.jsx)(Q.div,{style:{y:r,opacity:a},className:`mt-6 w-full max-w-sm sm:max-w-md`,children:(0,O.jsx)(Q.img,{src:y_,alt:`Illustration of Jash & Krisha holding photo frames`,width:1024,height:1024,draggable:!1,className:`mx-auto w-full select-none`,initial:{opacity:0,scale:.96},animate:e?{opacity:1,scale:1}:{opacity:0,scale:.96},transition:{duration:1.4,delay:.3,ease:c}})}),
     (0,O.jsx)(Q.p,{className:`caps mt-4 max-w-md text-[0.65rem] leading-[2] text-olive font-semibold sm:text-xs`,initial:{opacity:0},animate:e?{opacity:1}:{opacity:0},transition:{duration:1,delay:.45},children:$.invitationLine||`Cordially invite you to celebrate the Engagement Ceremony of`}),
     (0,O.jsxs)(Q.h1,{className:`script mt-2.5 text-[3.25rem] leading-[1.05] text-ink sm:text-7xl`,initial:`hidden`,animate:l,children:[
       (0,O.jsx)(Zg,{text:$.groom,delay:.55,trigger:l}),
