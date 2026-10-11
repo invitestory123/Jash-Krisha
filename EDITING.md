@@ -36,7 +36,7 @@ All customer data is managed in:
 - **Couple Illustration & Photos**:
   - `editable/assets/couple.png`: The signature couple illustration holding two picture frames featuring childhood photographs of Jash (groom) in the left frame and Krisha (bride) in the right frame.
   - `editable/assets/groom.png` & `editable/assets/bride.png`: Dedicated childhood photos of the groom and bride.
-  - `editable/assets/couple-photo.jpg` & `editable/assets/couple-photo-2.jpg`: Customer supplied photographs of Jash & Krisha featured in the Photographs & Memories gallery.
+  - `editable/assets/couple-photo-2.jpg`: Customer supplied photograph of Jash & Krisha featured in the Photographs & Memories (Cherished Moments) gallery.
   - Additional customer photos can be added directly into `images.customerPhotos` array in `editable/wedding-data.js`.
 
 ### 6. Music / Audio

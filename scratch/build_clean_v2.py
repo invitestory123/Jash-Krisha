@@ -347,18 +347,11 @@ function PhotoSection_(){
   let images = $.images || {};
   let defaultPhotos = [
     {
-      id: `photo-1`,
-      url: (images.couplePhoto || `./editable/assets/couple-photo.jpg`),
+      id: `photo-2`,
+      url: (images.couplePhoto2 || images.couplePhoto || `./editable/assets/couple-photo-2.jpg`),
       title: `Jash & Krisha`,
       subtitle: `Together Forever`,
       caption: `Cherished Moments • Jash & Krisha`
-    },
-    {
-      id: `photo-2`,
-      url: (images.couplePhoto2 || `./editable/assets/couple-photo-2.jpg`),
-      title: `Jash & Krisha`,
-      subtitle: `Sweet Memories`,
-      caption: `Moments of Joy • Engagement Celebration`
     }
   ];
   let photoList = (images.customerPhotos && images.customerPhotos.length > 0) ? images.customerPhotos : defaultPhotos;
@@ -377,8 +370,8 @@ function PhotoSection_(){
       children:photoList.map((item,idx)=>{
         let photoSrc = item.url || item.src;
         let title = item.title || `Jash & Krisha`;
-        let subtitle = item.subtitle || (idx === 0 ? `Together Forever` : `Sweet Memories`);
-        let caption = item.caption || (idx === 0 ? `Cherished Moments • Jash & Krisha` : `Moments of Joy • Engagement Celebration`);
+        let subtitle = item.subtitle || (isSingle ? `Together Forever` : (idx === 0 ? `Together Forever` : `Sweet Memories`));
+        let caption = item.caption || (isSingle ? `Cherished Moments • Jash & Krisha` : (idx === 0 ? `Cherished Moments • Jash & Krisha` : `Moments of Joy • Engagement Celebration`));
         return (0,O.jsxs)(`div`,{
           key:item.id||idx,
           className:`photo-card flex flex-col justify-between p-4 sm:p-5`,
