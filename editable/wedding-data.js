@@ -95,8 +95,18 @@ window.WEDDING_DATA = {
       {
         id: "photo-1",
         url: "./editable/assets/couple-photo.jpg",
+        title: "Jash & Krisha",
+        subtitle: "Together Forever",
         caption: "Cherished Moments • Jash & Krisha",
         captionGu: "સ્મૃતિ પળો • જશ અને ક્રિશા",
+      },
+      {
+        id: "photo-2",
+        url: "./editable/assets/couple-photo-2.jpg",
+        title: "Jash & Krisha",
+        subtitle: "Sweet Memories",
+        caption: "Moments of Joy • Engagement Celebration",
+        captionGu: "આનંદની પળો • સગાઈ મહોત્સવ",
       },
     ],
     // Replaceable template assets
@@ -104,6 +114,7 @@ window.WEDDING_DATA = {
     groomPhoto: "./editable/assets/groom.png",
     bridePhoto: "./editable/assets/bride.png",
     couplePhoto: "./editable/assets/couple-photo.jpg",
+    couplePhoto2: "./editable/assets/couple-photo-2.jpg",
     footerBg: "./editable/assets/footer-bg.jpg",
     map: "./editable/assets/map.jpg",
   },

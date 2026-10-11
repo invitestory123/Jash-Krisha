@@ -342,9 +342,27 @@ function FamilySection_(){
   ]});
 }
 
-/* Photo Section: Couple Portrait with Cherished Moments (Item 3: child photos removed, couple photo added) */
+/* Photo Section: Photographs & Memories featuring customer uploaded couple photos */
 function PhotoSection_(){
-  let couplePhotoSrc = ($.images && ($.images.couplePhoto || $.images.couple)) || `./editable/assets/couple-photo.jpg`;
+  let images = $.images || {};
+  let defaultPhotos = [
+    {
+      id: `photo-1`,
+      url: (images.couplePhoto || `./editable/assets/couple-photo.jpg`),
+      title: `Jash & Krisha`,
+      subtitle: `Together Forever`,
+      caption: `Cherished Moments • Jash & Krisha`
+    },
+    {
+      id: `photo-2`,
+      url: (images.couplePhoto2 || `./editable/assets/couple-photo-2.jpg`),
+      title: `Jash & Krisha`,
+      subtitle: `Sweet Memories`,
+      caption: `Moments of Joy • Engagement Celebration`
+    }
+  ];
+  let photoList = (images.customerPhotos && images.customerPhotos.length > 0) ? images.customerPhotos : defaultPhotos;
+  let isSingle = photoList.length === 1;
 
   return (0,O.jsxs)(`section`,{id:`photo-gallery`,className:`px-6 py-14 text-center sm:py-20 max-w-4xl mx-auto`,children:[
     (0,O.jsxs)(Xg,{children:[
@@ -355,24 +373,31 @@ function PhotoSection_(){
     ]}),
 
     (0,O.jsx)(Xg,{delay:.18,children:(0,O.jsx)(`div`,{
-      className:`mt-10 max-w-md mx-auto`,
-      children:(0,O.jsxs)(`div`,{
-        className:`photo-card flex flex-col justify-between p-4 sm:p-5`,
-        children:[
-          (0,O.jsx)(`div`,{className:`photo-image-wrapper aspect-square rounded-xl overflow-hidden shadow-md border border-gold/40`,children:
-            (0,O.jsx)(`img`,{
-              src:couplePhotoSrc,
-              alt:`Jash & Krisha`,
-              loading:`lazy`,
-              className:`size-full object-cover`
-            })
-          }),
-          (0,O.jsxs)(`div`,{className:`mt-4 text-center`,children:[
-            (0,O.jsx)(`p`,{className:`caps text-[0.68rem] font-bold text-ink tracking-wider`,children:`Jash & Krisha`}),
-            (0,O.jsx)(`p`,{className:`script text-2xl text-gold mt-1`,children:`Together Forever`}),
-            (0,O.jsx)(`p`,{className:`caps text-[0.52rem] text-sepia/75 mt-1 tracking-widest`,children:`Cherished Moments • Engagement Celebration`})
-          ]})
-        ]
+      className:isSingle ? `mt-10 max-w-md mx-auto` : `mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto items-stretch`,
+      children:photoList.map((item,idx)=>{
+        let photoSrc = item.url || item.src;
+        let title = item.title || `Jash & Krisha`;
+        let subtitle = item.subtitle || (idx === 0 ? `Together Forever` : `Sweet Memories`);
+        let caption = item.caption || (idx === 0 ? `Cherished Moments • Jash & Krisha` : `Moments of Joy • Engagement Celebration`);
+        return (0,O.jsxs)(`div`,{
+          key:item.id||idx,
+          className:`photo-card flex flex-col justify-between p-4 sm:p-5`,
+          children:[
+            (0,O.jsx)(`div`,{className:`photo-image-wrapper aspect-square rounded-xl overflow-hidden shadow-md border border-gold/40`,children:
+              (0,O.jsx)(`img`,{
+                src:photoSrc,
+                alt:title,
+                loading:`lazy`,
+                className:`size-full object-cover`
+              })
+            }),
+            (0,O.jsxs)(`div`,{className:`mt-4 text-center`,children:[
+              (0,O.jsx)(`p`,{className:`caps text-[0.68rem] font-bold text-ink tracking-wider`,children:title}),
+              (0,O.jsx)(`p`,{className:`script text-2xl text-gold mt-1`,children:subtitle}),
+              (0,O.jsx)(`p`,{className:`caps text-[0.52rem] text-sepia/75 mt-1 tracking-widest`,children:caption})
+            ]})
+          ]
+        });
       })
     })})
   ]});
